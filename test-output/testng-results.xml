@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-09-02T18:39:47 AST" name="Default suite" finished-at="2024-09-02T18:39:53 AST" duration-ms="6263">
+    <groups>
+    </groups>
+    <test started-at="2024-09-02T18:39:47 AST" name="Default test" finished-at="2024-09-02T18:39:53 AST" duration-ms="6263">
+      <class name="ultimateQATesting.ultimateQA">
+        <test-method is-config="true" signature="mySetup()[pri:0, instance:ultimateQATesting.ultimateQA@533b266e]" started-at="2024-09-02T18:39:47 AST" name="mySetup" finished-at="2024-09-02T18:39:51 AST" duration-ms="4013" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mySetup -->
+        <test-method signature="firstCase()[pri:0, instance:ultimateQATesting.ultimateQA@533b266e]" started-at="2024-09-02T18:39:51 AST" name="firstCase" finished-at="2024-09-02T18:39:53 AST" duration-ms="2214" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstCase -->
+      </class> <!-- ultimateQATesting.ultimateQA -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
