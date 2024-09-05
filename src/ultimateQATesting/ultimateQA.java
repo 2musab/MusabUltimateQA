@@ -13,57 +13,110 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class ultimateQA {
-	
-	WebDriver driver = new ChromeDriver();
-	Random rand = new Random();
-	
-	String[] firstNames = { "Alice", "Bob", "Charlie", "Diana", "Edward", "Fiona", "George", "Hannah", "Ian",
-	"Jasmine" };
-	
-	String[] lastNames = { "Smith", "Johnson", "Williams", "Jones", "Brown", "Davis", "Miller", "Wilson", "Moore",
-	"Taylor" };
-	
-	int firstNamesLength = firstNames.length;
-	int randomFirstName = rand.nextInt(firstNamesLength);
-	
-	int lastNamesLength = lastNames.length;
-	int randomLastName = rand.nextInt(lastNamesLength);
-	
+public class ultimateQA extends Parameters {
+
 	@BeforeTest
 	public void mySetup() {
-		
+
 		driver.manage().window().maximize();
-		driver.get("https://ultimateqa.com/complicated-page");		
+		driver.get("https://ultimateqa.com/sample-application-lifecycle-sprint-1/");
+
 	}
-	
-	@Test
-	public void firstCase() {
+
+	@Test(priority = 1)
+	public void first() {
+
+		WebElement firstName = driver.findElement(By.cssSelector("input[name='firstname']"));
+		firstName.sendKeys(fName);
+
+	}
+
+	@Test(priority = 2)
+	public void link2() {
+
+		driver.get("https://ultimateqa.com/sample-application-lifecycle-sprint-2/");
+
+	}
+
+	@Test(priority = 3)
+	public void second() {
+
+		first();
+
+		WebElement lastName = driver.findElement(By.cssSelector("input[name='lastname']"));
+		lastName.sendKeys(surName);
+
+	}
+
+	@Test(priority = 4)
+	public void link3() {
+
+		driver.get("https://ultimateqa.com/sample-application-lifecycle-sprint-3/");
+
+	}
+
+	@Test(priority = 5)
+	public void third() {
+
+		WebElement gender = driver.findElement(By.cssSelector("input[value='female']"));
+		gender.click();
+		gender.getAttribute("value");
+
+		second();
+
+	}
+
+	@Test(priority = 6)
+	public void link4() {
+		driver.get("https://ultimateqa.com/sample-application-lifecycle-sprint-4/");
+	}
+
+	@Test(priority = 7)
+	public void emergencyInfo() {
+
+		third();
+
+		WebElement gender = driver.findElement(By.id("radio1-f"));
+		gender.click();
 		
-		WebElement nameInFirstCase = driver.findElement(By.id("et_pb_contact_name_0"));
-		nameInFirstCase.sendKeys(firstNames[randomFirstName] + " " + lastNames[randomLastName]) ;
+		WebElement gender2 = driver.findElement(By.id("radio2-m"));
+		gender2.click();
+
+		WebElement maleFirstName = driver.findElement(By.id("f2"));
+		maleFirstName.sendKeys(mName);
+		WebElement lastName = driver.findElement(By.id("l2"));
+		lastName.sendKeys(surName);
 		
-		WebElement emailInFirstCase = driver.findElement(By.id("et_pb_contact_email_0"));
-		emailInFirstCase.sendKeys(firstNames[randomFirstName] + lastNames[randomLastName] + "@gmail.com");
+
+	}
+
+	@Test(priority = 8)
+	public void link5() {
+
+		driver.get("https://ultimateqa.com/sample-application-lifecycle-sprint-5/");
+	}
+
+	@Test(priority = 9)
+	public void submit() {
 		
-		WebElement message = driver.findElement(By.id("et_pb_contact_message_0"));
-		message.sendKeys("Hi, this is an automated message");
 		
-		WebElement resultInput = driver.findElement(By.name("et_pb_contact_captcha_0"));
-		resultInput.sendKeys("10");
-		
-		WebElement button = driver.findElement(By.cssSelector("div[id='et_pb_contact_form_0'] button[name='et_builder_submit_button']"));
-		button.click();
-		
-		WebElement username = driver.findElement(By.id("user_login_66d5b84159d2a"));
-		WebElement password = driver.findElement(By.id("user_pass_66d5b84159d2a"));
-		
-		username.sendKeys("I851"+firstNames[randomFirstName]);
-		password.sendKeys("45kjh_o@");
-		
-		WebElement login = driver.findElement(By.cssSelector("body > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > article:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > form:nth-child(1) > p:nth-child(4) > button:nth-child(1)"));
-		login.click();
-	
+
+		emergencyInfo();
+
+		WebElement submit = driver.findElement(By.id("submit2"));
+		submit.click();
+
+	}
+
+	@Test(priority = 10)
+	public void animal() {
+
+		WebElement animal = driver.findElement(By.cssSelector("input[value='crocodiles']"));
+		animal.click();
+
+		WebElement submit = driver.findElement(By.cssSelector("input[value='Submit']"));
+		submit.click();
+
 	}
 
 }

@@ -1,20 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-02T18:39:47 AST" name="Default suite" finished-at="2024-09-02T18:39:53 AST" duration-ms="6263">
+  <suite started-at="2024-09-05T18:25:20 AST" name="Default suite" finished-at="2024-09-05T18:25:30 AST" duration-ms="10337">
     <groups>
     </groups>
-    <test started-at="2024-09-02T18:39:47 AST" name="Default test" finished-at="2024-09-02T18:39:53 AST" duration-ms="6263">
+    <test started-at="2024-09-05T18:25:20 AST" name="Default test" finished-at="2024-09-05T18:25:30 AST" duration-ms="10337">
       <class name="ultimateQATesting.ultimateQA">
-        <test-method is-config="true" signature="mySetup()[pri:0, instance:ultimateQATesting.ultimateQA@533b266e]" started-at="2024-09-02T18:39:47 AST" name="mySetup" finished-at="2024-09-02T18:39:51 AST" duration-ms="4013" status="PASS">
+        <test-method is-config="true" signature="mySetup()[pri:0, instance:ultimateQATesting.ultimateQA@3ebff828]" started-at="2024-09-05T18:25:20 AST" name="mySetup" finished-at="2024-09-05T18:25:21 AST" duration-ms="1558" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- mySetup -->
-        <test-method signature="firstCase()[pri:0, instance:ultimateQATesting.ultimateQA@533b266e]" started-at="2024-09-02T18:39:51 AST" name="firstCase" finished-at="2024-09-02T18:39:53 AST" duration-ms="2214" status="PASS">
+        <test-method signature="first()[pri:1, instance:ultimateQATesting.ultimateQA@3ebff828]" started-at="2024-09-05T18:25:21 AST" name="first" finished-at="2024-09-05T18:25:21 AST" duration-ms="103" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- firstCase -->
+        </test-method> <!-- first -->
+        <test-method signature="link2()[pri:2, instance:ultimateQATesting.ultimateQA@3ebff828]" started-at="2024-09-05T18:25:21 AST" name="link2" finished-at="2024-09-05T18:25:22 AST" duration-ms="351" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- link2 -->
+        <test-method signature="second()[pri:3, instance:ultimateQATesting.ultimateQA@3ebff828]" started-at="2024-09-05T18:25:22 AST" name="second" finished-at="2024-09-05T18:25:22 AST" duration-ms="205" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- second -->
+        <test-method signature="link3()[pri:4, instance:ultimateQATesting.ultimateQA@3ebff828]" started-at="2024-09-05T18:25:22 AST" name="link3" finished-at="2024-09-05T18:25:22 AST" duration-ms="496" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- link3 -->
+        <test-method signature="third()[pri:5, instance:ultimateQATesting.ultimateQA@3ebff828]" started-at="2024-09-05T18:25:22 AST" name="third" finished-at="2024-09-05T18:25:23 AST" duration-ms="244" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- third -->
+        <test-method signature="link4()[pri:6, instance:ultimateQATesting.ultimateQA@3ebff828]" started-at="2024-09-05T18:25:23 AST" name="link4" finished-at="2024-09-05T18:25:23 AST" duration-ms="375" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- link4 -->
+        <test-method signature="emergencyInfo()[pri:7, instance:ultimateQATesting.ultimateQA@3ebff828]" started-at="2024-09-05T18:25:23 AST" name="emergencyInfo" finished-at="2024-09-05T18:25:23 AST" duration-ms="442" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emergencyInfo -->
+        <test-method signature="link5()[pri:8, instance:ultimateQATesting.ultimateQA@3ebff828]" started-at="2024-09-05T18:25:23 AST" name="link5" finished-at="2024-09-05T18:25:24 AST" duration-ms="615" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- link5 -->
+        <test-method signature="submit()[pri:9, instance:ultimateQATesting.ultimateQA@3ebff828]" started-at="2024-09-05T18:25:24 AST" name="submit" finished-at="2024-09-05T18:25:26 AST" duration-ms="2480" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submit -->
+        <test-method signature="animal()[pri:10, instance:ultimateQATesting.ultimateQA@3ebff828]" started-at="2024-09-05T18:25:26 AST" name="animal" finished-at="2024-09-05T18:25:30 AST" duration-ms="3421" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- animal -->
       </class> <!-- ultimateQATesting.ultimateQA -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
