@@ -78,7 +78,7 @@ public class ultimateQA extends Parameters {
 
 		WebElement gender = driver.findElement(By.id("radio1-f"));
 		gender.click();
-		
+
 		WebElement gender2 = driver.findElement(By.id("radio2-m"));
 		gender2.click();
 
@@ -86,7 +86,6 @@ public class ultimateQA extends Parameters {
 		maleFirstName.sendKeys(mName);
 		WebElement lastName = driver.findElement(By.id("l2"));
 		lastName.sendKeys(surName);
-		
 
 	}
 
@@ -98,8 +97,6 @@ public class ultimateQA extends Parameters {
 
 	@Test(priority = 9)
 	public void submit() {
-		
-		
 
 		emergencyInfo();
 
@@ -111,11 +108,17 @@ public class ultimateQA extends Parameters {
 	@Test(priority = 10)
 	public void animal() {
 
-		WebElement animal = driver.findElement(By.cssSelector("input[value='crocodiles']"));
-		animal.click();
+		WebElement submit = driver.findElement(By.cssSelector("form[action='https://ultimateqa.com']"));
+		List<WebElement> radio = submit.findElements(By.tagName("input"));
+		int radioSize = radio.size() - 1;
+		int randomRadio = rand.nextInt(radioSize);
+		System.out.println(radioSize);
 
-		WebElement submit = driver.findElement(By.cssSelector("input[value='Submit']"));
-		submit.click();
+		WebElement animal = radio.get(randomRadio);
+		animal.click();
+		
+		WebElement finalClick = driver.findElement(By.cssSelector("input[value='Submit']"));
+		finalClick.click();
 
 	}
 

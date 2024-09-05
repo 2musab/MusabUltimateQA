@@ -5,8 +5,8 @@
     <classes>
       <class name="ultimateQATesting.ultimateQA">
         <methods>
-          <include name="first"/>
           <include name="mySetup"/>
+          <include name="animal"/>
         </methods>
       </class> <!-- ultimateQATesting.ultimateQA -->
     </classes>
